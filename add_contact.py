@@ -28,20 +28,3 @@ def add_contact():
 		messagebox.showinfo("Contact add","Contact added sucessfully without address!")
 	else:
 		messagebox.showwarning("Input Error", "Please fill in all fields.")
-
-
-# Function to search for a contact by name
-def search_contact():
-	search_name = simpledialog.askstring("Search", "Enter name to search:")
-	if search_name:
-		found = False
-		with open(csv_file, mode='r') as file:
-			reader = csv.reader(file)
-			next(reader)  # Skip header
-			for row in reader:
-				if row[0].lower() == search_name.lower():
-					messagebox.showinfo("Search Result", f"Name: {row[0]}\nPhone: {row[1]}\nAddress: {row[2]}")
-					found = True
-					break
-			if not found:
-				messagebox.showinfo("Not Found", "No contact found with that name.")
