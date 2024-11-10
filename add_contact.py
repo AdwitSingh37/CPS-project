@@ -1,6 +1,5 @@
 #Importing
 import csv
-import tkinter as tk
 from tkinter import simpledialog, messagebox
 
 # Function to add a new contact 
