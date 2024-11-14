@@ -2,6 +2,7 @@
 import csv
 import tkinter as tk
 from tkinter import simpledialog, messagebox
+csv_file = "contacts.csv"
 
 
 # Function to add a new contact
