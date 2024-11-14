@@ -19,7 +19,7 @@ def fun_statistics():
     
     # Create a bar chart
     plt.figure(figsize=(8, 6))
-    plt.bar(digits, counts, color='skyblue')
+    plt.bar(digits, counts, color='indigo')
     plt.xlabel("Digits")
     plt.ylabel("Frequency")
     plt.title("Frequency of Each Digit in Phone Numbers")
