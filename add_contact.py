@@ -2,8 +2,6 @@
 import csv
 import tkinter as tk
 from tkinter import simpledialog, messagebox
-csv_file = "contacts.csv"
-
 
 # Function to add a new contact
 def add_contact():
@@ -16,7 +14,7 @@ def add_contact():
 	
 
 	if name and phone and address:
-		with open(csv_file, mode='a', newline='') as file:
+		with open("contact.csv", 'a', newline='') as file:
 			writer = csv.writer(file)
 			writer.writerow([name, phone, address])
 		messagebox.showinfo("Success", "Contact added successfully!")
