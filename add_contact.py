@@ -1,25 +1,18 @@
+#Importing
 import csv
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 
+# Function to add a new contact 
 def add_contact():
-	name = simpledialog.askstring("Input", "Enter name:")
-	phone = simpledialog.askstring("Input", "Enter phone:")
-	if len(phone)!=10:
-		messagebox.showwarning("Input Error", "Please enter valid phone number.")
-		phone = simpledialog.askstring("Input", "Enter phone:")
-	address=simpledialog.askstring("Input", "Enter address:")
-	
+    name=simpledialog.askstring("Input","Enter name:")
+    phone=simpledialog.askstring("Input","Enter phone number:")
+    address=simpledialog.askstring("Input","Enter address:")
 
-	if name and phone and address:
-		with open('contacts.csv', mode='a', newline='') as file:
-			writer = csv.writer(file)
-			writer.writerow([name, phone, address])
-		messagebox.showinfo("Success", "Contact added successfully!")
-	elif( name and phone and not address):
-		with open ("contacts.csv",'a',newline='') as file:
-			writer=csv.writer(file)
-			writer.writerow([name,phone,"Nil"])
-		messagebox.showinfo("Contact add","Contact added sucessfully without address!")
-	else:
-		messagebox.showwarning("Input Error", "Please fill in all fields.")
+    if name and phone and address:
+        with open ("contacts.csv",'a',newline='\n') as file:
+            writer=csv.writer(file)
+            writer.writerow([name,phone,address])
+        messagebox.showinfo("Contact added","Contact added sucessfully!")
+    else:
+        messagebox.showwarning("Input error", "Please fill in all the feilds")
