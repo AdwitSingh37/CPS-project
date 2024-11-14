@@ -13,7 +13,7 @@ def add_contact():
 	address=simpledialog.askstring("Input", "Enter address:")
 	
 
-	if name and phone and address:
+	if name and phone and address: #if all the the fields are filled 
 		with open("contact.csv", 'a', newline='') as file:
 			writer = csv.writer(file)
 			writer.writerow([name, phone, address])
@@ -21,7 +21,7 @@ def add_contact():
 	elif( name and phone and not address): #if the user doesn't type address 
 		with open ("contacts.csv",'a',newline='') as file:
 			writer=csv.writer(file)
-			writer.writerow([name,phone,"Nil"])
+			writer.writerow([name,phone,"Nil"]) 
 		messagebox.showinfo("Contact add","Contact added sucessfully without address!")
-	else:  #if the user doesn't fill feilds other than address
+	else:  #if the user doesn't fill fields other than address
 		messagebox.showwarning("Input Error", "Please fill in all fields.")
