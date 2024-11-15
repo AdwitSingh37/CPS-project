@@ -19,20 +19,22 @@ def main():
     root.title("Contact Directory")
 
     # Add buttons to the window
-    btn_add = tk.Button(root, text="Add Contact", command=add_contact, width=20)
-    btn_add.pack(pady=5)
+    btn_add = tk.Button(root, text="Add Contact", command=add_contact, width=50)
+    btn_add.pack(pady=10)
 
-    btn_search = tk.Button(root, text="Search Contact", command=search_contact, width=20)
-    btn_search.pack(pady=5)
+    btn_search = tk.Button(root, text="Search Contact", command=search_contact, width=50)
+    btn_search.pack(pady=10)
 
-    btn_display_all = tk.Button(root, text="Display All Contacts", command=display_all_contacts, width=20)
-    btn_display_all.pack(pady=5)
+    btn_display_all = tk.Button(root, text="Display All Contacts", command=display_all_contacts, width=50)
+    btn_display_all.pack(pady=10)
 
-    btn_statistics = tk.Button(root, text="Remove Contact", command=remove_contact, width=20)
-    btn_statistics.pack(pady=5)
+    btn_statistics = tk.Button(root, text="Remove Contact", command=remove_contact, width=50)
+    btn_statistics.pack(pady=10)
 
-    btn_statistics = tk.Button(root, text="Fun Statistics", command=fun_statistics, width=20)
-    btn_statistics.pack(pady=5)
+    btn_statistics = tk.Button(root, text="Fun Statistics", command=fun_statistics, width=50)
+    btn_statistics.pack(pady=10)
+
+    root.geometry("400x250")
 
     # Run the application
     root.mainloop()
